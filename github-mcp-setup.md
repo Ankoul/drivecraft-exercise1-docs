@@ -1,4 +1,4 @@
-# GitHub MCP Setup
+# GitHub MCP Setup (Copilot CLI)
 
 Read the Exercise 1 user story ([Issue #1](https://github.com/Ankoul/drivecraft-exercise1-docs/issues/1)) through the GitHub MCP server.
 
@@ -9,34 +9,33 @@ https://github.com/settings/tokens/new
 
 Set a short expiration (for example 7 days) and copy the token. Never commit it to a repository.
 
-## 2. Add the MCP config
+## 2. Expose the token as an environment variable
 
-Save as `.vscode/mcp.json` (use the `mcpServers` key if your client requires it):
+```powershell
+Add-Content $PROFILE '$env:GITHUB_PUBLIC_PAT = "your-github-token"'
+```
+
+Open a new terminal afterwards so the variable is loaded.
+
+## 3. Add the MCP config
+
+Add the `public-github` server to `~/.copilot/mcp-config.json`:
 
 ```json
 {
-  "servers": {
-    "github": {
+  "mcpServers": {
+    "public-github": {
       "type": "http",
       "url": "https://api.githubcopilot.com/mcp/",
       "headers": {
-        "Authorization": "Bearer ${input:github_token}"
-      }
+        "Authorization": "Bearer ${GITHUB_PUBLIC_PAT}"
+      },
+      "tools": ["*"]
     }
-  },
-  "inputs": [
-    {
-      "id": "github_token",
-      "type": "promptString",
-      "description": "GitHub PAT (public repo read only)",
-      "password": true
-    }
-  ]
+  }
 }
 ```
 
-Paste the token when prompted.
+## 4. Verify
 
-## 3. Verify
-
-Ask your agent to read issue `1` from `Ankoul/drivecraft-exercise1-docs`.
+Start `copilot`, run `/mcp` to confirm `public-github` is connected, then ask it to read issue `1` from `Ankoul/drivecraft-exercise1-docs`.
