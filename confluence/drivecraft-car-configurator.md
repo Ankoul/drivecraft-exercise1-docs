@@ -1,7 +1,6 @@
 # DriveCraft – Car Configurator
 
-> Mirror of https://atc.bmwgroup.net/confluence/spaces/CTWAILAB/pages/8486730838/ (space: CTW AI Enablement Lab, version 8).
-> Images are not mirrored; the wheel icons are described textually below.
+> Images are not included; the wheel icons are described textually below.
 
 **Pick a car, choose a color and wheels, watch the price update.**
 
