@@ -1,7 +1,5 @@
 # DriveCraft – Car Configurator
 
-> Images are not included; the wheel icons are described textually below.
-
 **Pick a car, choose a color and wheels, watch the price update.**
 
 DriveCraft is a simple, interactive car configurator that lets users explore 5 different vehicle models, select their preferred paint colour and wheel type, and instantly see the final price update in real time.
@@ -17,6 +15,12 @@ DriveCraft is a simple, interactive car configurator that lets users explore 5 d
 | **Vehicles Available** | 5 |
 | **Configurable Options** | Vehicle model, Paint colour, Wheel type |
 | **Pricing** | Base price + colour surcharge + wheel surcharge |
+
+---
+
+## Application Screenshot
+
+![DriveCraft screenshot](../images/drivecraft_screenshot.png)
 
 ---
 
@@ -90,12 +94,12 @@ Each wheel type has a dedicated icon displayed in the configuration panel when t
 
 ### Wheel Icon Designs
 
-| Wheel | Icon file (original attachment) | Visual Characteristics | Vehicles |
+| Wheel | Icon | Visual Characteristics | Vehicles |
 | --- | --- | --- | --- |
-| **Standard Alloy** | wheel-standard-alloy.png | 5 evenly-spaced spokes at 72° intervals; medium tyre wall thickness; classic alloy wheel proportions; small solid centre hub | All vehicles (base) |
-| **Off-Road Rugged Tyres** | wheel-offroad-rugged.png | Extra-thick tyre ring (large outer-to-rim gap); 12 radial tread marks around tyre perimeter; 4 wide X-pattern spokes (45° offset); chunky, rugged proportions — small rim area | Summit SUV only |
-| **Sport Low-Profile** | wheel-sport-lowprofile.png | Very thin tyre wall (small outer-to-rim gap); 10 thin spokes at 36° intervals; large exposed rim area — wide, clean look; minimal centre hub | Bolt Coupe only |
-| **Aero Efficiency Wheels** | wheel-aero-efficiency.png | 5 closed turbine-blade segments (pinwheel pattern); enclosed spoke design — no open gap between hub and rim; curved blade shapes suggest aerodynamic airflow; smooth continuous surface with minimal air gaps | Volt EV only |
+| **Standard Alloy** | ![wheel-standard-alloy](../images/wheel-standard-alloy.png) | 5 evenly-spaced spokes at 72° intervals; medium tyre wall thickness; classic alloy wheel proportions; small solid centre hub | All vehicles (base) |
+| **Off-Road Rugged Tyres** | ![wheel-offroad-rugged](../images/wheel-offroad-rugged.png) | Extra-thick tyre ring (large outer-to-rim gap); 12 radial tread marks around tyre perimeter; 4 wide X-pattern spokes (45° offset); chunky, rugged proportions — small rim area | Summit SUV only |
+| **Sport Low-Profile** | ![wheel-sport-lowprofile](../images/wheel-sport-lowprofile.png) | Very thin tyre wall (small outer-to-rim gap); 10 thin spokes at 36° intervals; large exposed rim area — wide, clean look; minimal centre hub | Bolt Coupe only |
+| **Aero Efficiency Wheels** | ![wheel-aero-efficiency](../images/wheel-aero-efficiency.png) | 5 closed turbine-blade segments (pinwheel pattern); enclosed spoke design — no open gap between hub and rim; curved blade shapes suggest aerodynamic airflow; smooth continuous surface with minimal air gaps | Volt EV only |
 
 ---
 
