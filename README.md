@@ -9,3 +9,4 @@ Reference material for **Exercise 1 — Implement a Feature + Self-Review**.
 
 Feature: **Add wheel selection with pricing to the DriveCraft configurator.**
 Read the issue with the GitHub MCP server, and the documentation from this repository.
+Setup: [GitHub MCP configuration](github-mcp-setup.md)
