@@ -45,6 +45,8 @@ Set a short expiration (for example 7 days) and copy the token. Never commit it 
 
 Paste the token when prompted.
 
+> Tip: to open the MCP settings (and the token prompt), press `Shift` twice and type `Settings | GitHub Copilot | Model Context Protocol (MCP)`.
+
 </details>
 
 <details>
