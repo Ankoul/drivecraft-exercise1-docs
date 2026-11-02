@@ -1,4 +1,4 @@
-# GitHub MCP Setup (Copilot CLI)
+# GitHub MCP Setup (IntelliJ and Copilot CLI)
 
 Read the Exercise 1 user story ([Issue #1](https://github.com/Ankoul/drivecraft-exercise1-docs/issues/1)) through the GitHub MCP server.
 
@@ -15,11 +15,37 @@ Set a short expiration (for example 7 days) and copy the token. Never commit it 
 Add-Content $PROFILE '$env:GITHUB_PUBLIC_PAT = "your-github-token"'
 ```
 
-Open a new terminal afterwards so the variable is loaded.
+Open a new terminal (and restart IntelliJ) afterwards so the variable is loaded.
 
 ## 3. Add the MCP config
 
-Add the `public-github` server to `~/.copilot/mcp-config.json`:
+| | IntelliJ | Copilot CLI |
+|---|---|---|
+| Manage | `Settings \| Tools \| GitHub Copilot \| Model Context Protocol (MCP)` | `/mcp` |
+| Config file | `~/AppData/Local/github-copilot/intellij/mcp.json` | `~/.copilot/mcp-config.json` |
+| Config file field | `servers` | `mcpServers` |
+
+<details>
+<summary>IntelliJ (click to expand)</summary>
+
+```json
+{
+  "servers": {
+    "public-github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${GITHUB_PUBLIC_PAT}"
+      }
+    }
+  }
+}
+```
+
+</details>
+
+<details>
+<summary>Copilot CLI (click to expand)</summary>
 
 ```json
 {
@@ -36,6 +62,11 @@ Add the `public-github` server to `~/.copilot/mcp-config.json`:
 }
 ```
 
+</details>
+
 ## 4. Verify
 
-Start `copilot`, run `/mcp` to confirm `public-github` is connected, then ask it to read issue `1` from `Ankoul/drivecraft-exercise1-docs`.
+- **IntelliJ:** open the MCP settings page and check that `public-github` is running.
+- **Copilot CLI:** run `/mcp` and check that `public-github` is connected.
+
+Then ask the agent to read issue `1` from `Ankoul/drivecraft-exercise1-docs`.
